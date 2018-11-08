@@ -13,7 +13,6 @@ class Category extends Controller
     public function index()
     {
         $field = db('cate')->select();
-        
 //         $field = $this->db->getAll();
         $this->assign('field',$field);
         return $this->fetch();
