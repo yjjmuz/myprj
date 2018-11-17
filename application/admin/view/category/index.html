@@ -27,7 +27,7 @@
 							<th>分类名称</th>
 							<th width="160">上级分类</th>
 							<th width="80">排序</th>
-							<th width="80">操作</th>
+							<th width="120">操作</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -38,7 +38,9 @@
 							<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">{$vo['cate_name']}</u></td>
 							<td>{$vo['cate_pid']}</td>
 							<td>{$vo['cate_sort']}</td>
-							<td><a href="{:url('addSon',['cate_id'=>$vo['cate_id']])}">添加子集</a></td>
+							<td><a href="{:url('addSon',['cate_id'=>$vo['cate_id']])}">添加子集</a>
+							<a href="{:url('edit',['cate_id'=>$vo['cate_id']])}">编辑</a>
+							<a href="{:url('del',['cate_id'=>$vo['cate_id']])}">删除</a></td>
 						</tr>
 					{/foreach}
 					</tbody>
