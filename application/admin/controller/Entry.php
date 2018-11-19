@@ -26,4 +26,10 @@ class Entry extends Common
         }
         return $this->fetch();
     }
+    
+    public function logOut()
+    {
+        session(null);
+        $this->success('退出成功','admin/entry/index');
+    }
 }

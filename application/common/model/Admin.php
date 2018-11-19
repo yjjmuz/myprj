@@ -55,4 +55,5 @@ class Admin extends Model
         }
             
     }
+    
 }
