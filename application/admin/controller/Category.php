@@ -12,6 +12,7 @@ class Category extends Controller
     }
     public function index()
     {
+//         halt($this->db);
         $field = db('cate')->select();
 //         $field = $this->db->getAll();
         $this->assign('field',$field);
@@ -62,7 +63,7 @@ class Category extends Controller
         }
         $cate_id = input('param.cate_id');
         $oldData = $this->db->find($cate_id);
-        dump($oldData);
+//         dump($oldData);
         $this->assign('oldData',$oldData);
         $cateData = $this->db->getCateData($cate_id);
 //         halt($cateData);
